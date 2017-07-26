@@ -1,5 +1,4 @@
 import * as React from "react";
-import { ThreadCount } from "./ThreadCounts";
 import { ColorMap } from "./ColorMap";
 import { Sett, Repeat, Reverse } from "./Sett";
 

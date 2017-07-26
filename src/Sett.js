@@ -19,9 +19,10 @@ export class Sett {
         const component = /(\w)(\d+)\s*/g;
         let pattern = [];
         let match;
+        // eslint-disable-next-line
         while ((match = component.exec(s)) != null) {
             const name = match[1];
-            const count = parseInt(match[2]);
+            const count = parseInt(match[2], 10);
             pattern.push(new ThreadCount(name, count))
         }
 
