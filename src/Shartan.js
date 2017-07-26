@@ -69,15 +69,15 @@ const Weft = (props) => {
     </div>;
 }
 
-const Shartan = () => {
+const Shartan = (props) => {
     const dimensions = {
-        width: 400,
-        height: 400
+        width: props.width,
+        height: props.width
     }
 
     const bgStyle = {
-        height: "400px",
-        width: "400px",
+        height: `${dimensions.height}px`,
+        width: `${dimensions.width}px`,
         position: "absolute",
         top: "0px"
     };
