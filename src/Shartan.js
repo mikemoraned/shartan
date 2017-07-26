@@ -1,26 +1,6 @@
 import * as React from "react";
-
-class ThreadCounts {
-    constructor(counts) {
-        this.counts = counts;
-    }
-
-    mapPercentages(fn) {
-        const total = this.counts.reduce((sum, t) => sum + t.count, 0);
-        return this.counts.map((threadCount) => {
-            console.dir(threadCount);
-            const percentage = (100.0 * threadCount.count) / total;
-            return fn(percentage, threadCount);
-        });
-    }
-}
-
-class ThreadCount {
-    constructor(colorName, count) {
-        this.colorName = colorName;
-        this.count = count;
-    }
-}
+import { ThreadCount } from "./ThreadCounts";
+import { Sett, Repeat, Reverse } from "./Sett";
 
 class ColorMap {
     constructor() {
@@ -33,33 +13,6 @@ class ColorMap {
 
     colorFor(name) {
         return this.colors[name];
-    }
-}
-
-const Repeat = (pattern) => {
-    return Array.from(pattern);
-}
-
-const Reverse = (pattern) => {
-    let copy = Array.from(pattern);
-    copy.reverse();
-    return copy;
-}
-
-class Sett {
-    constructor() {
-        this.pattern = [
-            new ThreadCount("K", 4),
-            new ThreadCount("R", 24),
-            new ThreadCount("K", 24),
-            new ThreadCount("Y", 4),
-        ];
-    }
-
-    pivoted(pivots) {
-        const patterns = pivots.map((pivot) => pivot(this.pattern));
-        const combined = patterns.reduce((combined, p) => combined.concat(p), []);
-        return new ThreadCounts(combined);
     }
 }
 
@@ -142,7 +95,12 @@ const Shartan = () => {
         top: "0px"
     };
 
-    const sett = new Sett();
+    const sett = new Sett([
+        new ThreadCount("K", 4),
+        new ThreadCount("R", 24),
+        new ThreadCount("K", 24),
+        new ThreadCount("Y", 4),
+    ]);
     const colorMap = new ColorMap();
 
     return <div style={bgStyle}>
