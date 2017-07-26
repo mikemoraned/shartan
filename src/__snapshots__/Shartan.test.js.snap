@@ -419,3 +419,519 @@ exports[`renders default 1`] = `
   </div>
 </div>
 `;
+
+exports[`renders when sett specified 1`] = `
+<div
+  style={
+    Object {
+      "height": "400px",
+      "position": "absolute",
+      "top": "0px",
+      "width": "400px",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "position": "absolute",
+        "top": "0px",
+        "width": "400px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "float": "left",
+          "height": "100%",
+          "width": "1.7857142857142858%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "float": "left",
+          "height": "100%",
+          "width": "10.714285714285714%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "float": "left",
+          "height": "100%",
+          "width": "4.017857142857143%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "float": "left",
+          "height": "100%",
+          "width": "6.696428571428571%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "float": "left",
+          "height": "100%",
+          "width": "1.7857142857142858%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "float": "left",
+          "height": "100%",
+          "width": "1.7857142857142858%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "float": "left",
+          "height": "100%",
+          "width": "6.696428571428571%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "float": "left",
+          "height": "100%",
+          "width": "4.017857142857143%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "float": "left",
+          "height": "100%",
+          "width": "10.714285714285714%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "float": "left",
+          "height": "100%",
+          "width": "1.7857142857142858%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "float": "left",
+          "height": "100%",
+          "width": "1.7857142857142858%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "float": "left",
+          "height": "100%",
+          "width": "10.714285714285714%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "float": "left",
+          "height": "100%",
+          "width": "4.017857142857143%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "float": "left",
+          "height": "100%",
+          "width": "6.696428571428571%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "float": "left",
+          "height": "100%",
+          "width": "1.7857142857142858%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "float": "left",
+          "height": "100%",
+          "width": "1.7857142857142858%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "float": "left",
+          "height": "100%",
+          "width": "6.696428571428571%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "float": "left",
+          "height": "100%",
+          "width": "4.017857142857143%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "float": "left",
+          "height": "100%",
+          "width": "10.714285714285714%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "float": "left",
+          "height": "100%",
+          "width": "1.7857142857142858%",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "position": "absolute",
+        "top": "0px",
+        "width": "400px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "height": "1.7857142857142858%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": "6.696428571428571%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": "4.017857142857143%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": "10.714285714285714%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": "1.7857142857142858%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": "1.7857142857142858%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": "10.714285714285714%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": "4.017857142857143%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": "6.696428571428571%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "height": "1.7857142857142858%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "height": "1.7857142857142858%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": "6.696428571428571%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": "4.017857142857143%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": "10.714285714285714%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": "1.7857142857142858%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": "1.7857142857142858%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": "10.714285714285714%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": "4.017857142857143%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": "6.696428571428571%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "yellow",
+          "height": "1.7857142857142858%",
+          "opacity": "0.5",
+          "width": "100%",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;

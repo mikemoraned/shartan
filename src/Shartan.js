@@ -70,6 +70,9 @@ const Weft = (props) => {
 }
 
 const Shartan = (props) => {
+    const sett = props.sett == null ? Sett.parse("K4 R24 K24 Y4") : Sett.parse(props.sett);
+    const colorMap = new ColorMap();
+
     const dimensions = {
         width: props.width,
         height: props.width
@@ -81,14 +84,6 @@ const Shartan = (props) => {
         position: "absolute",
         top: "0px"
     };
-
-    const sett = new Sett([
-        new ThreadCount("K", 4),
-        new ThreadCount("R", 24),
-        new ThreadCount("K", 24),
-        new ThreadCount("Y", 4),
-    ]);
-    const colorMap = new ColorMap();
 
     return <div style={bgStyle}>
         <Warp threadCounts={sett.pivoted([Repeat, Reverse, Repeat, Reverse])}

@@ -1,4 +1,4 @@
-import { ThreadCounts } from "./ThreadCounts";
+import {ThreadCount, ThreadCounts} from "./ThreadCounts";
 
 export const Repeat = (pattern) => {
     return Array.from(pattern);
@@ -13,6 +13,19 @@ export const Reverse = (pattern) => {
 export class Sett {
     constructor(pattern) {
         this.pattern = pattern;
+    }
+
+    static parse(s) {
+        const component = /(\w)(\d+)\s*/g;
+        let pattern = [];
+        let match;
+        while ((match = component.exec(s)) != null) {
+            const name = match[1];
+            const count = parseInt(match[2]);
+            pattern.push(new ThreadCount(name, count))
+        }
+
+        return new Sett(pattern);
     }
 
     pivoted(pivots) {

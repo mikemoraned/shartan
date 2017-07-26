@@ -8,3 +8,10 @@ test('renders default', () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+test('renders when sett specified', () => {
+    const tree = renderer.create(
+        <Shartan sett="K4 R24 K9 R15 Y4" width={400}/>
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+});
