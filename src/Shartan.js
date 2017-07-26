@@ -1,20 +1,7 @@
 import * as React from "react";
 import { ThreadCount } from "./ThreadCounts";
+import { ColorMap } from "./ColorMap";
 import { Sett, Repeat, Reverse } from "./Sett";
-
-class ColorMap {
-    constructor() {
-        this.colors = {
-            K: "black",
-            R: "red",
-            Y: "yellow",
-        };
-    }
-
-    colorFor(name) {
-        return this.colors[name];
-    }
-}
 
 const Vertical = (props) => {
     const style = {
