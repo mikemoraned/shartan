@@ -5,8 +5,7 @@ const Vertical = (props) => {
         backgroundColor: props.color,
         width: props.width,
         height: "100%",
-        float: "left",
-        opacity: "0.5"
+        float: "left"
     };
 
     return <div style={style}>&nbsp;</div>;
@@ -36,20 +35,19 @@ const Shartan = () => {
         top: "0px"
     };
 
-    const verticals = ["red", "blue", "green"];
-    const horizontals = ["yellow", "blue", "red"];
+    const colors = ["red", "blue", "green"];
 
     return <div style={bgStyle}>
         {
-            verticals.map((color) => {
-                const width = `${100.0 / verticals.length}%`;
+            colors.map((color) => {
+                const width = `${100.0 / colors.length}%`;
                 return <Vertical color={color} width={width} />;
             })
         }
         <div style={horizontalsStyle}>
         {
-            horizontals.map((color) => {
-                const height = `${100.0 / horizontals.length}%`;
+            colors.map((color) => {
+                const height = `${100.0 / colors.length}%`;
                 return <Horizontal color={color} height={height} />;
             })
         }
