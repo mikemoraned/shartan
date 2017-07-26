@@ -38,10 +38,10 @@ const Warp = (props) => {
 
     return <div style={style}>
         {
-            threadCounts.mapPercentages((percentage, threadCount) => {
+            threadCounts.mapPercentages((percentage, threadCount, index) => {
                 const width = `${percentage}%`;
                 const color = colorMap.colorFor(threadCount.colorName);
-                return <Vertical color={color} width={width}/>;
+                return <Vertical key={index} color={color} width={width}/>;
             })
         }
     </div>;
@@ -60,10 +60,10 @@ const Weft = (props) => {
 
     return <div style={style}>
         {
-            threadCounts.mapPercentages((percentage, threadCount) => {
+            threadCounts.mapPercentages((percentage, threadCount, index) => {
                 const height = `${percentage}%`;
                 const color = colorMap.colorFor(threadCount.colorName);
-                return <Horizontal color={color} height={height} />;
+                return <Horizontal key={index} color={color} height={height} />;
             })
         }
     </div>;

@@ -5,9 +5,9 @@ export class ThreadCounts {
 
     mapPercentages(fn) {
         const total = this.counts.reduce((sum, t) => sum + t.count, 0);
-        return this.counts.map((threadCount) => {
+        return this.counts.map((threadCount, index) => {
             const percentage = (100.0 * threadCount.count) / total;
-            return fn(percentage, threadCount);
+            return fn(percentage, threadCount, index);
         });
     }
 }
