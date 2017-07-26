@@ -1,4 +1,4 @@
-import { ThreadCount, ThreadCounts } from "./ThreadCounts";
+import { ThreadCounts } from "./ThreadCounts";
 
 export const Repeat = (pattern) => {
     return Array.from(pattern);
