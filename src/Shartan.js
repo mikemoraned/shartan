@@ -5,8 +5,7 @@ const Vertical = (props) => {
         backgroundColor: props.color,
         width: props.width,
         height: "100%",
-        float: "left",
-        opacity: "0.5"
+        float: "left"
     };
 
     return <div style={style}>&nbsp;</div>;
