@@ -24,7 +24,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -36,7 +36,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -48,7 +48,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -60,7 +60,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -72,7 +72,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -84,7 +84,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -96,7 +96,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -108,7 +108,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -120,7 +120,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -132,7 +132,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -144,7 +144,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -156,7 +156,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -168,7 +168,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -180,7 +180,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -192,7 +192,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -204,7 +204,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -227,7 +227,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -239,7 +239,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -251,7 +251,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -263,7 +263,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -275,7 +275,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -287,7 +287,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -299,7 +299,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -311,7 +311,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -323,7 +323,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -335,7 +335,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -347,7 +347,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -359,7 +359,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -371,7 +371,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -383,7 +383,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -395,7 +395,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -407,7 +407,7 @@ exports[`renders default 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -444,7 +444,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -456,7 +456,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -468,7 +468,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "4.017857142857143%",
@@ -480,7 +480,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "6.696428571428571%",
@@ -492,7 +492,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -504,7 +504,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -516,7 +516,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "6.696428571428571%",
@@ -528,7 +528,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "4.017857142857143%",
@@ -540,7 +540,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -552,7 +552,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -564,7 +564,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -576,7 +576,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -588,7 +588,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "4.017857142857143%",
@@ -600,7 +600,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "6.696428571428571%",
@@ -612,7 +612,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -624,7 +624,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -636,7 +636,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "6.696428571428571%",
@@ -648,7 +648,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "4.017857142857143%",
@@ -660,7 +660,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "float": "left",
           "height": "100%",
           "width": "10.714285714285714%",
@@ -672,7 +672,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "float": "left",
           "height": "100%",
           "width": "1.7857142857142858%",
@@ -695,7 +695,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -707,7 +707,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "6.696428571428571%",
           "opacity": "0.5",
           "width": "100%",
@@ -719,7 +719,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "4.017857142857143%",
           "opacity": "0.5",
           "width": "100%",
@@ -731,7 +731,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -743,7 +743,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -755,7 +755,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -767,7 +767,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -779,7 +779,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "4.017857142857143%",
           "opacity": "0.5",
           "width": "100%",
@@ -791,7 +791,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "6.696428571428571%",
           "opacity": "0.5",
           "width": "100%",
@@ -803,7 +803,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -815,7 +815,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -827,7 +827,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "6.696428571428571%",
           "opacity": "0.5",
           "width": "100%",
@@ -839,7 +839,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "4.017857142857143%",
           "opacity": "0.5",
           "width": "100%",
@@ -851,7 +851,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -863,7 +863,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -875,7 +875,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",
@@ -887,7 +887,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "10.714285714285714%",
           "opacity": "0.5",
           "width": "100%",
@@ -899,7 +899,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#000000",
           "height": "4.017857142857143%",
           "opacity": "0.5",
           "width": "100%",
@@ -911,7 +911,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#FF0000",
           "height": "6.696428571428571%",
           "opacity": "0.5",
           "width": "100%",
@@ -923,7 +923,7 @@ exports[`renders when sett specified 1`] = `
     <div
       style={
         Object {
-          "backgroundColor": "yellow",
+          "backgroundColor": "#FFFF00",
           "height": "1.7857142857142858%",
           "opacity": "0.5",
           "width": "100%",

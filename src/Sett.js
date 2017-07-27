@@ -16,7 +16,7 @@ export class Sett {
     }
 
     static parse(s) {
-        const component = /(\w)(\d+)\s*/g;
+        const component = /([A-Za-z]{1,2})(\d+)\s*/g;
         let pattern = [];
         let match;
         // eslint-disable-next-line
