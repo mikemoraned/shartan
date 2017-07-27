@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Shartan from '../src/Shartan';
+import Shartan from "./Shartan";
 
 class App extends Component {
     constructor() {
@@ -21,7 +21,7 @@ class App extends Component {
       return (
         <div className="App">
           <Shartan sett={this.state.sett} width={400}/>
-          <input style={{position: "relative", top: 10, left: 10, zIndex: 1}}
+          <input style={{position: "absolute", top: 10, left: 10, zIndex: 1}}
                  type="text"
                  value={this.state.sett}
                  onChange={this.handleSettChange} />

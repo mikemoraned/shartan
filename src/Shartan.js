@@ -2,94 +2,86 @@ import * as React from "react";
 import { ColorMap } from "./ColorMap";
 import { Sett, Repeat, Reverse } from "./Sett";
 
-const Vertical = (props) => {
-    const style = {
-        backgroundColor: props.color,
-        width: props.width,
-        height: "100%",
-        float: "left"
-    };
+class Shartan extends React.Component {
 
-    return <div style={style}>&nbsp;</div>;
-}
+    constructor(props) {
+        super(props);
 
-const Horizontal = (props) => {
-    const style = {
-        backgroundColor: props.color,
-        width: "100%",
-        height: props.height,
-        opacity: "0.5"
-    };
-
-    return <div style={style}>&nbsp;</div>;
-}
-
-const Warp = (props) => {
-    const threadCounts = props.threadCounts;
-    const colorMap = props.colorMap;
-    const dimensions = props.dimensions;
-    const style = {
-        height: `${dimensions.height}px`,
-        width: `${dimensions.width}px`,
-        position: "absolute",
-        top: "0px"
-    };
-
-    return <div style={style}>
-        {
-            threadCounts.mapPercentages((percentage, threadCount, index) => {
-                const width = `${percentage}%`;
-                const color = colorMap.colorFor(threadCount.colorName);
-                return <Vertical key={index} color={color} width={width}/>;
-            })
-        }
-    </div>;
-}
-
-const Weft = (props) => {
-    const threadCounts = props.threadCounts;
-    const colorMap = props.colorMap;
-    const dimensions = props.dimensions;
-    const style = {
-        height: `${dimensions.height}px`,
-        width: `${dimensions.width}px`,
-        position: "absolute",
-        top: "0px"
-    };
-
-    return <div style={style}>
-        {
-            threadCounts.mapPercentages((percentage, threadCount, index) => {
-                const height = `${percentage}%`;
-                const color = colorMap.colorFor(threadCount.colorName);
-                return <Horizontal key={index} color={color} height={height} />;
-            })
-        }
-    </div>;
-}
-
-const Shartan = (props) => {
-    const sett = props.sett == null ? Sett.parse("K4 R24 K24 Y4") : Sett.parse(props.sett);
-    const colorMap = new ColorMap();
-
-    const dimensions = {
-        width: props.width,
-        height: props.width
+        this.state = {
+            sett: this.parseSett(props),
+            colorMap: new ColorMap(),
+            dimensions : {
+                width: props.width,
+                height: props.width
+            }
+        };
     }
 
-    const bgStyle = {
-        height: `${dimensions.height}px`,
-        width: `${dimensions.width}px`,
-        position: "absolute",
-        top: "0px"
-    };
+    parseSett(props) {
+        return props.sett == null ? Sett.parse("K4 R24 K24 Y4") : Sett.parse(props.sett);
+    }
 
-    return <div style={bgStyle}>
-        <Warp threadCounts={sett.pivoted([Repeat, Reverse, Repeat, Reverse])}
-              colorMap={colorMap} dimensions={dimensions}/>
-        <Weft threadCounts={sett.pivoted([Reverse, Repeat, Reverse, Repeat])}
-              colorMap={colorMap} dimensions={dimensions}/>
-    </div>;
+    componentDidMount() {
+        this.updateCanvas();
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            sett: this.parseSett(nextProps)
+        });
+    }
+
+    componentDidUpdate() {
+        this.updateCanvas();
+    }
+
+    updateCanvas() {
+        const { width, height } = this.state.dimensions;
+        const { sett } = this.state;
+
+        const ctx = this.refs.canvas.getContext('2d');
+        ctx.clearRect(0, 0, width, height);
+
+        this.drawWarp(ctx, sett.pivoted([Repeat, Reverse, Repeat, Reverse]));
+        this.drawWeft(ctx, sett.pivoted([Reverse, Repeat, Reverse, Repeat]));
+    }
+
+    drawWarp(context, threadCounts) {
+        let lastEndX = 0;
+        threadCounts.mapPercentages((percentage, threadCount) => {
+            const width = this.state.dimensions.width * (percentage / 100);
+            const height = this.state.dimensions.height;
+
+            context.fillStyle = this.state.colorMap.colorFor(threadCount.colorName);
+            context.fillRect(lastEndX, 0, width, height);
+
+            lastEndX = lastEndX + width;
+        })
+    }
+
+    drawWeft(context, threadCounts) {
+        const prevGlobalAlpha = context.globalAlpha;
+        context.globalAlpha = 0.5;
+        let lastEndY = 0;
+        threadCounts.mapPercentages((percentage, threadCount) => {
+            const width = this.state.dimensions.width;
+            const height = this.state.dimensions.height * (percentage / 100);
+
+            context.fillStyle = this.state.colorMap.colorFor(threadCount.colorName);
+            context.fillRect(0, lastEndY, width, height);
+
+            lastEndY = lastEndY + height;
+        });
+        context.globalAlpha = prevGlobalAlpha;
+    }
+
+    render() {
+        return (
+            <canvas ref="canvas"
+                    width={this.state.dimensions.width}
+                    height={this.state.dimensions.height}/>
+        );
+    }
 }
 
 export default Shartan;
