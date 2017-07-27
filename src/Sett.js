@@ -21,7 +21,7 @@ export class Sett {
         let match;
         // eslint-disable-next-line
         while ((match = component.exec(s)) != null) {
-            const name = match[1];
+            const name = match[1].toUpperCase();
             const count = parseInt(match[2], 10);
             pattern.push(new ThreadCount(name, count))
         }
