@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Shartan from "./Shartan";
+import {SettGenerator} from "./SettGenerator";
+import {ColorMap} from "./ColorMap";
 
 class App extends Component {
     constructor() {
         super();
+
+        const settGen = new SettGenerator(new ColorMap());
+        const sett = settGen.settFrom(`${new Date().toISOString()}`);
         this.state = {
-            sett: "K4 R24 K9 Y4",
+            sett: sett.toString(),
         };
 
         this.handleSettChange = this.handleSettChange.bind(this);

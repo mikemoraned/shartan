@@ -62,3 +62,21 @@ describe("parse", () => {
         expect(sett).toEqual(new Sett([new ThreadCount("K", 4), new ThreadCount("LR", 24)]));
     });
 });
+
+describe("toString", () => {
+    test('empty Sett is empty string', () => {
+        expect(new Sett([]).toString()).toEqual("");
+    });
+
+    test('can round-trip empty Sett through parse', () => {
+        expect(Sett.parse(new Sett([]).toString())).toEqual(new Sett([]));
+    });
+
+    test('non-empty Sett toString is space-separated pattern', () => {
+        expect(new Sett(pattern).toString()).toEqual("K4 R24");
+    });
+
+    test('can round-trip non-empty Sett through parse', () => {
+        expect(Sett.parse(new Sett(pattern).toString())).toEqual(new Sett(pattern));
+    });
+});

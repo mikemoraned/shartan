@@ -34,4 +34,8 @@ export class Sett {
         const combined = patterns.reduce((combined, p) => combined.concat(p), []);
         return new ThreadCounts(combined);
     }
+
+    toString() {
+        return this.pattern.join(" ");
+    }
 }

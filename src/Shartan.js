@@ -52,7 +52,7 @@ class Shartan extends React.Component {
             const width = this.state.dimensions.width * (percentage / 100);
             const height = this.state.dimensions.height;
 
-            context.fillStyle = this.state.colorMap.colorFor(threadCount.colorName);
+            context.fillStyle = this.state.colorMap.colorForName(threadCount.colorName);
             context.fillRect(lastEndX, 0, width, height);
 
             lastEndX = lastEndX + width;
@@ -67,7 +67,7 @@ class Shartan extends React.Component {
             const width = this.state.dimensions.width;
             const height = this.state.dimensions.height * (percentage / 100);
 
-            context.fillStyle = this.state.colorMap.colorFor(threadCount.colorName);
+            context.fillStyle = this.state.colorMap.colorForName(threadCount.colorName);
             context.fillRect(0, lastEndY, width, height);
 
             lastEndY = lastEndY + height;
