@@ -9,23 +9,31 @@ class App extends Component {
     constructor() {
         super();
 
-        const settGen = new SettGenerator(new ColorMap());
-        const sett = settGen.settFrom(`${new Date().toISOString()}`);
+        this.settGen = new SettGenerator(new ColorMap());
+        const sett = this.settGen.settFrom(`${new Date().toISOString()}`);
+
+        this.handleSettChange = this.handleSettChange.bind(this);
+        this.handleShartanClick = this.handleShartanClick.bind(this);
+
         this.state = {
             sett: sett.toString(),
         };
-
-        this.handleSettChange = this.handleSettChange.bind(this);
     }
 
     handleSettChange(event) {
         this.setState({sett: event.target.value});
     }
 
+    handleShartanClick() {
+        this.setState({
+            sett: this.settGen.settFrom(`${new Date().toISOString()}`)
+        });
+    }
+
     render() {
       return (
         <div className="App">
-          <Shartan sett={this.state.sett} width={400}/>
+          <Shartan sett={this.state.sett} width={400} onClick={this.handleShartanClick}/>
           <input style={{position: "absolute", top: 10, left: 10, zIndex: 1}}
                  type="text"
                  value={this.state.sett}
