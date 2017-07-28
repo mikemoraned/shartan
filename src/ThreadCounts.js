@@ -17,4 +17,8 @@ export class ThreadCount {
         this.colorName = colorName;
         this.count = count;
     }
+
+    toString() {
+        return `${this.colorName}${this.count}`;
+    }
 }
