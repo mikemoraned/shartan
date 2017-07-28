@@ -77,7 +77,7 @@ class Shartan extends React.Component {
 
     render() {
         return (
-            <canvas ref="canvas"
+            <canvas ref="canvas" onClick={this.props.onClick}
                     width={this.state.dimensions.width}
                     height={this.state.dimensions.height}/>
         );
