@@ -11,3 +11,7 @@ test("can lookup color by name", () => {
 test("can lookup name by index", () => {
     expect(new ColorMap().nameForIndex(21)).toEqual("K");
 })
+
+test("can lookup index by name", () => {
+    expect(new ColorMap().indexForName("K")).toEqual(21);
+})

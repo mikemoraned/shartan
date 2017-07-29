@@ -1,4 +1,4 @@
-import { Sett, Repeat, Reverse } from "./Sett";
+import { Sett } from "./Sett";
 import {ThreadCount} from "./ThreadCounts";
 import Stochator from "stochator";
 
