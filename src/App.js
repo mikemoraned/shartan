@@ -41,7 +41,7 @@ class App extends Component {
         const updateStateFn = () => {
             const currentDate = new Date();
             if (currentDate < targetDate) {
-                const t = (targetDate.getTime() - currentDate.getTime()) / transitionDuration;
+                const t = (currentDate.getTime() - startDate.getTime()) / transitionDuration;
                 this.setState({
                     sett: transitionFn(ease(t)).toString()
                 });
