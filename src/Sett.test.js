@@ -63,6 +63,17 @@ describe("parse", () => {
     });
 });
 
+describe("parseAll", () => {
+    test('multiple strings', () => {
+        const setts = Sett.parseAll(["K4","R24"]);
+        expect(setts).toEqual([
+            new Sett([new ThreadCount("K", 4)]),
+            new Sett([new ThreadCount("R", 24)])
+        ]);
+    });
+});
+
+
 describe("toString", () => {
     test('empty Sett is empty string', () => {
         expect(new Sett([]).toString()).toEqual("");

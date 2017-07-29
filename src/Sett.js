@@ -12,7 +12,15 @@ export const Reverse = (pattern) => {
 
 export class Sett {
     constructor(pattern) {
-        this.pattern = pattern;
+        this._pattern = pattern;
+    }
+
+    get pattern() {
+        return this._pattern;
+    }
+
+    static parseAll(strings) {
+        return strings.map((s) => { return Sett.parse(s) });
     }
 
     static parse(s) {
@@ -30,12 +38,12 @@ export class Sett {
     }
 
     pivoted(pivots) {
-        const patterns = pivots.map((pivot) => pivot(this.pattern));
+        const patterns = pivots.map((pivot) => pivot(this._pattern));
         const combined = patterns.reduce((combined, p) => combined.concat(p), []);
         return new ThreadCounts(combined);
     }
 
     toString() {
-        return this.pattern.join(" ");
+        return this._pattern.join(" ");
     }
 }

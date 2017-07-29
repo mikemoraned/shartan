@@ -49,4 +49,17 @@ export class ColorMap {
         }
         throw `no name for index ${searchIndex}`;
     }
+
+    indexForName(searchName) {
+        let currIndex = 0;
+        for (const [key] of this.colors) {
+            if (key === searchName) {
+                return currIndex;
+            }
+            else {
+                currIndex++;
+            }
+        }
+        throw `no name for index ${searchName}`;
+    }
 }
