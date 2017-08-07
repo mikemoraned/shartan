@@ -5,10 +5,9 @@
   "dependencies": {
     "d3-ease": "^1.0.3",
     "d3-interpolate": "^1.1.5",
-    "npm": "^5.3.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10",
+    "react-scripts": "^1.0.10",
     "stochator": "^0.6.2"
   },
   "homepage": "http://mikemoraned.github.io/shartan",
@@ -20,6 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 6006",
+    "server": "node server/index.js",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
