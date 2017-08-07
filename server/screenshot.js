@@ -44,7 +44,9 @@ async function screenshot(url, format) {
     }
 }
 
-const url = "https://github.com";
+// const url = "https://github.com";
+const url = "http://localhost:3002/shartan/";
+// const url = "http://localhost:3000/";
 const format = "png";
 screenshot(url, format);
 
