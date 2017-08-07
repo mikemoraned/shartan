@@ -1,10 +1,13 @@
-var express = require('express');
-var app = express();
-var path = require('path');
+import express from 'express';
+import path from 'path';
+import morgan from 'morgan';
 
-app.use('/shartan', express.static(path.resolve(__dirname + '/../build')));
+const app = express();
 
-var port = 3002;
+app.use(morgan('combined'));
+app.use('/shartan', express.static(path.resolve(__dirname + '/../../build')));
+
+const port = 3002;
 app.listen(port, () => {
     console.log('listening on: ', port);
-})
+});

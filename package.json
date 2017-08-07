@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 6006",
-    "server": "node server/index.js",
+    "server": "cd server && npm run start",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
