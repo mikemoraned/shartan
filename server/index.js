@@ -8,9 +8,15 @@ const app = express();
 app.use(morgan('combined'));
 app.use('/shartan', express.static(path.resolve(__dirname + '/../../build')));
 
-const url = "http://localhost:3002/shartan/";
+const port = process.argv[2];
+
+// const url = "http://localhost:3002/shartan/";
 // const url = "https://github.com";
 app.get('/preview.png', async (req, res) => {
+    const url = (req.hostname === "localhost") ?
+        ("http://" + req.hostname + ":" + port + "/shartan") : ("http://" + req.hostname + "/shartan");
+    console.log("url: ", url);
+
     const client = await CDP();
     console.log("got client");
 
@@ -65,7 +71,6 @@ app.get('/preview.png', async (req, res) => {
     // console.log("closed client");
 });
 
-const port = process.argv[2];
 app.listen(port, () => {
     console.log('listening on: ', port);
 });
