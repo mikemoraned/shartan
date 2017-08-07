@@ -1,27 +1,50 @@
 import CDP from 'chrome-remote-interface';
+import fs from 'fs';
 
-async function screenshot() {
+async function screenshot(url, format) {
+    console.log(url, ", ", format);
+
+    let client;
     try {
-        // connect to endpoint
-        var client = await CDP();
-        // extract domains
+        client = await CDP();
         const {Network, Page} = client;
-        // setup handlers
+
         Network.requestWillBeSent((params) => {
             console.log(params.request.url);
         });
-        // enable events then start!
+
         await Promise.all([Network.enable(), Page.enable()]);
-        await Page.navigate({url: 'https://github.com'});
-        await Page.loadEventFired();
+        await Page.navigate({url});
+
+        console.log("navigated to ", url);
+
+        await Page.loadEventFired(async () => {
+            console.log("load event fired");
+
+            const delay = 5000;
+            setTimeout(async () => {
+                const screenshot = await Page.captureScreenshot({format, fromSurface: true});
+                const buffer = new Buffer(screenshot.data, 'base64');
+                fs.writeFile('output.png', buffer, 'base64', function (err) {
+                    if (err) {
+                        console.error(err);
+                    } else {
+                        console.log('Screenshot saved');
+                    }
+                    client.close();
+                });
+            }, delay);
+        });
     } catch (err) {
         console.error(err);
     } finally {
-        if (client) {
-            await client.close();
-        }
+        // if (client) {
+        //     await client.close();
+        // }
     }
 }
 
-screenshot();
+const url = "https://github.com";
+const format = "png";
+screenshot(url, format);
 
