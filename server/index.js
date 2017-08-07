@@ -8,8 +8,8 @@ const app = express();
 app.use(morgan('combined'));
 app.use('/shartan', express.static(path.resolve(__dirname + '/../../build')));
 
-// const url = "http://localhost:3002/shartan/";
-const url = "https://github.com";
+const url = "http://localhost:3002/shartan/";
+// const url = "https://github.com";
 app.get('/preview.png', async (req, res) => {
     const client = await CDP();
     console.log("got client");
