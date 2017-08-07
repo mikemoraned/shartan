@@ -21,6 +21,5 @@ RUN cd server && npm install
 RUN npm run build
 RUN cd server && npm run build
 
-EXPOSE 3002
+CMD ./start.sh $PORT
 
-CMD ./start.sh

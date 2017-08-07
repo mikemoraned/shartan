@@ -65,7 +65,7 @@ app.get('/preview.png', async (req, res) => {
     // console.log("closed client");
 });
 
-const port = 3002;
+const port = process.argv[2];
 app.listen(port, () => {
     console.log('listening on: ', port);
 });
