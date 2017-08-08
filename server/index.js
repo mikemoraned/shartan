@@ -6,15 +6,13 @@ import morgan from 'morgan';
 const app = express();
 
 app.use(morgan('combined'));
-app.use('/shartan', express.static(path.resolve(__dirname + '/../../build')));
+app.use('/', express.static(path.resolve(__dirname + '/../../build')));
 
 const port = process.argv[2];
 
-// const url = "http://localhost:3002/shartan/";
-// const url = "https://github.com";
 app.get('/preview.png', async (req, res) => {
     const url = (req.hostname === "localhost") ?
-        ("http://" + req.hostname + ":" + port + "/shartan") : ("http://" + req.hostname + "/shartan");
+        ("http://" + req.hostname + ":" + port + "/") : ("http://" + req.hostname + "/");
     console.log("url: ", url);
 
     const client = await CDP();

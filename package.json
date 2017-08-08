@@ -10,7 +10,7 @@
     "react-scripts": "^1.0.10",
     "stochator": "^0.6.2"
   },
-  "homepage": "http://mikemoraned.github.io/shartan",
+  "homepage": "http://shartan.houseofmoran.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
