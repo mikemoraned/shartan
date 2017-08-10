@@ -7,6 +7,24 @@ import {ColorMap} from "./ColorMap";
 import {SettInterpolator} from "./SettInterpolator";
 import {Sett} from "./Sett";
 import { easeCubicInOut } from "d3-ease";
+import {
+    ShareButtons,
+    generateShareIcon
+} from 'react-share';
+const {
+    FacebookShareButton,
+    LinkedinShareButton,
+    TwitterShareButton,
+    WhatsappShareButton,
+    PinterestShareButton,
+} = ShareButtons;
+
+const FacebookIcon = generateShareIcon('facebook');
+const LinkedinIcon = generateShareIcon('linkedin');
+const TwitterIcon = generateShareIcon('twitter');
+const WhatsappIcon = generateShareIcon('whatsapp');
+const PinterestIcon = generateShareIcon('pinterest');
+
 
 class App extends Component {
     constructor() {
@@ -22,6 +40,13 @@ class App extends Component {
 
         this.state = {
             sett: sett.toString(),
+            share: {
+                title: "Sham Tartan",
+                description: "A Sham (pretend, unofficial) Tartan from http://shartan.houseofmoran.com/",
+                url: "http://shartan.houseofmoran.com/",
+                preview: "http://shartan.houseofmoran.com/preview.png",
+                media: "http://shartan.houseofmoran.com/preview.png"
+            }
         };
     }
 
@@ -58,13 +83,28 @@ class App extends Component {
 
     render() {
       return (
-        <div className="App">
-          <Shartan sett={this.state.sett} width={400} onClick={this.handleShartanClick}/>
-          <input style={{position: "absolute", top: 10, left: 10, zIndex: 1}}
-                 type="text"
-                 value={this.state.sett}
-                 onChange={this.handleSettChange} />
-        </div>
+          <div className="App">
+              <Shartan sett={this.state.sett} width={400} onClick={this.handleShartanClick}/>
+              <input style={{position: "absolute", top: 10, left: 10, zIndex: 1}}
+                     type="text" value={this.state.sett} onChange={this.handleSettChange} />
+              <div className="share">
+                  <FacebookShareButton {...this.state.share}>
+                      <FacebookIcon size={32} round={true} />
+                  </FacebookShareButton>
+                  <TwitterShareButton {...this.state.share}>
+                      <TwitterIcon size={32} round={true} />
+                  </TwitterShareButton>
+                  <PinterestShareButton {...this.state.share}>
+                      <PinterestIcon size={32} round={true} />
+                  </PinterestShareButton>
+                  <WhatsappShareButton {...this.state.share}>
+                      <WhatsappIcon size={32} round={true} />
+                  </WhatsappShareButton>
+                  <LinkedinShareButton {...this.state.share}>
+                      <LinkedinIcon size={32} round={true} />
+                  </LinkedinShareButton>
+              </div>
+          </div>
       );
     }
 }

@@ -8,6 +8,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "^1.0.10",
+    "react-share": "^1.15.0",
     "stochator": "^0.6.2"
   },
   "homepage": "http://shartan.houseofmoran.com/",
