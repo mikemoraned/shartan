@@ -1,13 +1,13 @@
 import express from 'express';
 import Canvas from 'canvas';
 
-import Sett from './src/shared/shartan/Sett';
-import CanvasRenderer from './src/shared/shartan/CanvasRenderer';
+import Sett from '../src/shared/shartan/Sett';
+import CanvasRenderer from '../src/shared/shartan/CanvasRenderer';
 
 const app = express();
 const renderer = new CanvasRenderer();
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.use('/', express.static('../build'));
 
 app.get('/sett.png', function (req, res) {
     const sett = new Sett();
@@ -24,4 +24,5 @@ app.get('/sett.png', function (req, res) {
     res.end(canvas.toBuffer(), 'binary');
 });
 
-app.listen(4000, () => console.log('Example app listening on port 4000!'));
+const port = process.argv[2];
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
