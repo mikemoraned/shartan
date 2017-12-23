@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Shartan width={100} height={100} />
+        <Shartan width={500} height={500} />
       </div>
     );
   }
