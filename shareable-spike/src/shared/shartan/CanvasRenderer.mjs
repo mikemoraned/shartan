@@ -5,7 +5,8 @@ class CanvasRenderer {
 
   renderSett(sett, canvasContext, dimensions) {
     const { width, height } = dimensions;
-    canvasContext.fillRect(0, 0, width, height);
+      canvasContext.fillStyle = "red";
+      canvasContext.fillRect(0, 0, width, height);
   }
 }
 
