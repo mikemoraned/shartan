@@ -28,7 +28,7 @@ class Shartan extends React.Component {
       super(props);
 
       this.state = {
-          sett: parse('K30 B24 K6 B6 K6 B24 K30 G4'),
+          sett: parse('K18 DO5 LY6 DO5 G9 LN16'),
           dimensions : {
               width: props.width,
               height: props.width

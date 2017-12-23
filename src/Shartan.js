@@ -1,6 +1,25 @@
 import * as React from "react";
-import { ColorMap } from "./ColorMap";
-import { Sett, Repeat, Reverse } from "./Sett";
+import tartan from 'tartan';
+import 'tartan-schema';
+import 'tartan-processing';
+import 'tartan-render';
+
+const schema = tartan.schema.extended;
+
+function errorHandler(error, data, severity) {
+    console.log(error, data, severity);
+}
+
+const parse = schema.parse({
+    errorHandler: errorHandler,
+    transformSyntaxTree: tartan.transform.optimize()
+});
+
+const format = schema.format({
+    defaultColors: schema.colors,
+    includeUnusedColors: false,
+    includeDefaultColors: true
+});
 
 class Shartan extends React.Component {
 
@@ -9,7 +28,6 @@ class Shartan extends React.Component {
 
         this.state = {
             sett: this.parseSett(props),
-            colorMap: new ColorMap(),
             dimensions : {
                 width: props.width,
                 height: props.width
@@ -18,7 +36,7 @@ class Shartan extends React.Component {
     }
 
     parseSett(props) {
-        return props.sett == null ? Sett.parse("K4 R24 K24 Y4") : Sett.parse(props.sett);
+        return props.sett == null ? parse("K4 R24 K24 Y4") : parse(props.sett);
     }
 
     componentDidMount() {
@@ -36,50 +54,22 @@ class Shartan extends React.Component {
     }
 
     updateCanvas() {
-        const { width, height } = this.state.dimensions;
         const { sett } = this.state;
 
-        const ctx = this.refs.canvas.getContext('2d');
-        ctx.clearRect(0, 0, width, height);
-
-        this.drawWarp(ctx, sett.pivoted([Repeat, Reverse, Repeat, Reverse]));
-        this.drawWeft(ctx, sett.pivoted([Reverse, Repeat, Reverse, Repeat]));
-    }
-
-    drawWarp(context, threadCounts) {
-        let lastEndX = 0;
-        threadCounts.mapPercentages((percentage, threadCount) => {
-            const width = this.state.dimensions.width * (percentage / 100);
-            const height = this.state.dimensions.height;
-
-            context.fillStyle = this.state.colorMap.colorForName(threadCount.colorName);
-            context.fillRect(lastEndX, 0, width, height);
-
-            lastEndX = lastEndX + width;
-        })
-    }
-
-    drawWeft(context, threadCounts) {
-        const prevGlobalAlpha = context.globalAlpha;
-        context.globalAlpha = 0.5;
-        let lastEndY = 0;
-        threadCounts.mapPercentages((percentage, threadCount) => {
-            const width = this.state.dimensions.width;
-            const height = this.state.dimensions.height * (percentage / 100);
-
-            context.fillStyle = this.state.colorMap.colorForName(threadCount.colorName);
-            context.fillRect(0, lastEndY, width, height);
-
-            lastEndY = lastEndY + height;
+        const render = tartan.render.canvas(sett, {
+            defaultColors: schema.colors,
+            transformSyntaxTree: tartan.transform.flatten()
         });
-        context.globalAlpha = prevGlobalAlpha;
+
+        render(this.refs.canvas, { x: 0, y: 0});
     }
 
     render() {
         return (
             <canvas ref="canvas" onClick={this.props.onClick}
                     width={this.state.dimensions.width}
-                    height={this.state.dimensions.height}/>
+                    height={this.state.dimensions.height}
+            />
         );
     }
 }

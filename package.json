@@ -5,11 +5,16 @@
   "dependencies": {
     "d3-ease": "^1.0.3",
     "d3-interpolate": "^1.1.5",
+    "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "^1.0.10",
     "react-share": "^1.15.0",
-    "stochator": "^0.6.2"
+    "stochator": "^0.6.2",
+    "tartan": "^5.0.1",
+    "tartan-processing": "^1.0.0",
+    "tartan-render": "^1.1.0",
+    "tartan-schema": "^1.0.0"
   },
   "homepage": "http://shartan.houseofmoran.com/",
   "scripts": {
