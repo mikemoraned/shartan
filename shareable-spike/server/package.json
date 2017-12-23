@@ -10,6 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "canvas": "^1.6.9",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "tartan": "^5.0.1",
+    "tartan-processing": "^1.0.0",
+    "tartan-render": "^1.1.0",
+    "tartan-schema": "^1.0.0"
   }
 }

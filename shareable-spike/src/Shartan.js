@@ -45,7 +45,6 @@ class Shartan extends React.Component {
     }
 
     updateCanvas() {
-        const { dimensions } = this.state;
         const { sett } = this.state;
 
         const render = tartan.render.canvas(sett, {
