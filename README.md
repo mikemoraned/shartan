@@ -37,6 +37,24 @@ backend of the main app, the front-end of which it was screenshotting.
     docker build -t shartan-app .
     docker run -e PORT=3002 -p 3002:3002 -it --rm --name running-shartan-app shartan-app
 
+## Kubernetes
+
+These are instructions to run this from "houseofmoran" docker hub repository.
+
+### Build and push to docker hub
+
+    export DOCKER_ID_USER="houseofmoran"
+    docker login
+    docker build -t houseofmoran/shartan:2 .
+    docker push houseofmoran/shartan:2 .
+    
+### Push to k8s cluster
+
+    # assume kubectl using the content for your cluster
+    kubectl apply -f k8s/namespace.yaml # optional if namespace already created
+    kubectl apply -f k8s/deployment.yaml
+    kubectl apply -f k8s/service.yaml
+    
 ## Locally
 
 I recommend, unless you really need to test the preview functionality, you just use a standard

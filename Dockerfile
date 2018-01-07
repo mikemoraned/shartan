@@ -1,10 +1,9 @@
 FROM node:8.2.1
 
 # Install chrome
-RUN apt-get update
-RUN apt-get install -y libxss1 libappindicator1 libindicator7
-RUN wget --quiet https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN dpkg -i google-chrome*.deb; exit 0
+RUN apt-get update && apt-get install -y libxss1 libappindicator1 libindicator7
+RUN wget --quiet https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    dpkg -i google-chrome*.deb; exit 0
 ## above might show "errors", fixed by next line
 RUN apt-get install -y -f
 
