@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: shartan-view-service
+  namespace: shartan
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: shartan.houseofmoran.io.
+spec:
+  type: LoadBalancer
+  selector:
+    app: shartan-view
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
