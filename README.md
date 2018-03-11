@@ -54,7 +54,8 @@ These are instructions to run this from "houseofmoran" docker hub repository.
     kubectl apply -f k8s/namespace.yaml # optional if namespace already created
     kubectl apply -f k8s/deployment.yaml
     kubectl apply -f k8s/service.yaml
-    
+    kubectl apply -f k8s/ingress.yaml
+
 ## Locally
 
 I recommend, unless you really need to test the preview functionality, you just use a standard
