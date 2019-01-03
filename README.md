@@ -2,29 +2,30 @@
 
 ## Disclaimer
 
-*None* of these rendered images constitute an official
+_None_ of these rendered images constitute an official
 Tartan, hence the Shartan name: Sham Tartan.
 
 ## What is this?
 
 This is a small project to play around
 with a couple of things:
-* Using React to make something that looks passably like Tartan
-by executing some definitions (turns out, pretty easy)
-* Making a mostly front-end site be shareable
-over Facebook, Twitter and Slack (turns out, surprisingly
-annoying)
+
+- Using React to make something that looks passably like Tartan
+  by executing some definitions (turns out, pretty easy)
+- Making a mostly front-end site be shareable
+  over Facebook, Twitter and Slack (turns out, surprisingly
+  annoying)
 
 ## Shareable Front-end
 
 My [blog post](http://blog.houseofmoran.com/post/163952918683/when-backend-is-frontend-and-back-again)
-gives an overview: "The core of the idea is to run an instance of Chrome alongside your backend. When a request comes in 
+gives an overview: "The core of the idea is to run an instance of Chrome alongside your backend. When a request comes in
 for a preview image you ask it to take a screenshot of the page you want to use as a preview which you then proxy back
 to the browser."
-                   
+
 I remixed the details of how to talk to Chrome over the
-debugger protocol with setup instructions for installing Chrome on Linux (see 
-[medium](https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a) and [github](https://github.com/schnerd/chrome-headless-screenshots)) 
+debugger protocol with setup instructions for installing Chrome on Linux (see
+[medium](https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a) and [github](https://github.com/schnerd/chrome-headless-screenshots))
 to get a Docker setup for this alongside my main app, which I then deployed on Heroku (http://shartan.houseofmoran.com/).
 
 Note that the only bit I added was to make the Chrome instance run alongside the
@@ -45,9 +46,9 @@ These are instructions to run this from "houseofmoran" docker hub repository.
 
     export DOCKER_ID_USER="houseofmoran"
     docker login
-    docker build -t houseofmoran/shartan:2 .
-    docker push houseofmoran/shartan:2 .
-    
+    docker build -t houseofmoran/shartan:2.1.0 .
+    docker push houseofmoran/shartan:2.1.0
+
 ### Push to k8s cluster
 
     # assume kubectl using the content for your cluster
@@ -70,6 +71,3 @@ then you'll need:
     npm run build
     cd server
     npm run start 3002
-
-
-
