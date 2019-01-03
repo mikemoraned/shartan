@@ -46,16 +46,17 @@ These are instructions to run this from "houseofmoran" docker hub repository.
 
     export DOCKER_ID_USER="houseofmoran"
     docker login
-    docker build -t houseofmoran/shartan:2.1.0 .
-    docker push houseofmoran/shartan:2.1.0
+    docker build -t houseofmoran/shartan:2.3.0 .
+    docker push houseofmoran/shartan:2.3.0
 
 ### Push to k8s cluster
 
     # assume kubectl using the content for your cluster
     kubectl apply -f k8s/namespace.yaml # optional if namespace already created
-    kubectl apply -f k8s/deployment.yaml
-    kubectl apply -f k8s/service.yaml
-    kubectl apply -f k8s/ingress.yaml
+    export NAMESPACE=shartan
+    kubectl apply --namespace=${NAMESPACE} -f k8s/deployment.yaml
+    kubectl apply --namespace=${NAMESPACE} -f k8s/service.yaml
+    kubectl apply --namespace=${NAMESPACE} -f k8s/ingress.yaml
 
 ## Locally
 
