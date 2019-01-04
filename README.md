@@ -46,8 +46,8 @@ These are instructions to run this from "houseofmoran" docker hub repository.
 
     export DOCKER_ID_USER="houseofmoran"
     docker login
-    docker build -t houseofmoran/shartan:2.3.1 .
-    docker push houseofmoran/shartan:2.3.1
+    docker build -t houseofmoran/shartan:2.4.0 .
+    docker push houseofmoran/shartan:2.4.0
 
 ### Push to k8s cluster
 
