@@ -23,7 +23,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/react": "^4.1.4",
+    "@storybook/react": "^5.2.8",
     "gh-pages": "^2.0.1",
     "react-test-renderer": "^16.7.0"
   },
