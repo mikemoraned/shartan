@@ -17,15 +17,15 @@ spec:
     spec:
       containers:
         - name: shartan-view
-          image: houseofmoran/shartan:2.4.1
+          image: houseofmoran/shartan:2.4.2
           env:
             - name: PORT
               value: "3000"
           resources:
             limits:
-              memory: 100Mi
+              memory: 200Mi
             requests:
-              memory: 50Mi
+              memory: 100Mi
           ports:
             - name: http
               containerPort: 3000

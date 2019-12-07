@@ -10,9 +10,8 @@ spec:
   tls:
     - hosts:
         - shartan.do.houseofmoran.io
-        - shartan-do.houseofmoran.com
         - shartan.houseofmoran.com
-      secretName: letsencrypt-cert-prod
+      secretName: shartan-cert-prod
   rules:
     - host: shartan.do.houseofmoran.io
       http: &http
@@ -21,7 +20,5 @@ spec:
             backend:
               serviceName: shartan-view-service
               servicePort: 80
-    - host: shartan-do.houseofmoran.com
-      http: *http
     - host: shartan.houseofmoran.com
       http: *http
