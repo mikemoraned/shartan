@@ -1,6 +1,6 @@
 {
   "name": "shartan",
-  "version": "2.4.0",
+  "version": "2.4.2",
   "private": true,
   "dependencies": {
     "d3-ease": "^1.0.5",
@@ -10,7 +10,7 @@
     "react-scripts": "^2.1.2",
     "react-share": "^2.4.0",
     "stochator": "^0.6.2",
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.13"
   },
   "homepage": "http://shartan.houseofmoran.com/",
   "scripts": {
