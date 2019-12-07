@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: shartan-view
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: shartan-view
-          image: houseofmoran/shartan:2.4.0
+          image: houseofmoran/shartan:2.4.1
           env:
             - name: PORT
               value: "3000"
