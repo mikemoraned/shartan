@@ -1,6 +1,6 @@
 export class ColorMap {
     constructor() {
-        this.colors = new Map([
+        const pairs = [
             [ "LR", "#CC6666" ],
             [ "R",  "#FF0000" ],
             [ "DR", "#990000" ],
@@ -22,43 +22,42 @@ export class ColorMap {
             [ "LN", "#CCCCCC" ],
             [ "N",  "#999999" ],
             [ "DN", "#333333" ],
-            [ "K", "#000000" ],
+            [ "K",  "#000000" ],
             [ "LT", "#999966" ],
             [ "T",  "#663300" ],
             [ "DT", "#330000" ],
-        ]);
+        ];
+        this.colorForNameMap = new Map();
+        pairs.forEach((pair) => {
+            const [ name, color ] = pair;
+            this.colorForNameMap.set(name, color);
+        });
+        this.nameForIndexArray = [];
+        pairs.forEach((pair) => {
+            const [ name, color ] = pair;
+            this.nameForIndexArray.push(name);
+        });
     }
 
     colorForName(name) {
-        return this.colors.get(name);
+        return this.colorForNameMap.get(name);
     }
 
     get length() {
-        return this.colors.size;
+        return this.colorForNameMap.size;
     }
 
     nameForIndex(searchIndex) {
-        let currIndex = 0;
-        for (const [key] of this.colors) {
-            if (searchIndex === currIndex) {
-                return key;
-            }
-            else {
-                currIndex++;
-            }
+        if (searchIndex < this.nameForIndexArray.length) {
+            return this.nameForIndexArray[searchIndex];
         }
         throw `no name for index ${searchIndex}`;
     }
 
     indexForName(searchName) {
-        let currIndex = 0;
-        for (const [key] of this.colors) {
-            if (key === searchName) {
-                return currIndex;
-            }
-            else {
-                currIndex++;
-            }
+        const index = this.nameForIndexArray.findIndex((name) => name === searchName);
+        if (index != -1) {
+            return index;
         }
         throw `no name for index ${searchName}`;
     }
