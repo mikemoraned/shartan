@@ -51,6 +51,21 @@ Open app:
 
     flyctl open
 
+### Staging Deploy
+
+Create the staging app, if needed:
+
+    flyctl apps create shartan-staging-houseofmoran --builder dockerfile --no-config
+
+Deploy to staging:
+
+    flyctl deploy --config ./fly.staging.toml
+
+Open app:
+
+    flyctl open --config ./fly.staging.toml
+
+
 ## Domains / SSL
 
 Get IPs:
