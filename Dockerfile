@@ -20,5 +20,5 @@ RUN cd server && npm install
 RUN npm run build
 RUN cd server && npm run build
 
-CMD ./start.sh $PORT
+CMD ./start.sh 8080
 

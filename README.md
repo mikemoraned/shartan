@@ -33,29 +33,39 @@ backend of the main app, the front-end of which it was screenshotting.
 
 # Build/run
 
-## Docker / Heroku
+## Fly.io
 
-    docker build -t shartan-app .
-    docker run -e PORT=3002 -p 3002:3002 -it --rm --name running-shartan-app shartan-app
+## Create
 
-## Kubernetes
+Create app (if not created already during `flyctl init`):
 
-These are instructions to run this from "houseofmoran" docker hub repository.
+    flyctl apps create shartan-houseofmoran --builder dockerfile --no-config
 
-### Build and push to docker hub
+## Deploy
 
-    export DOCKER_ID_USER="houseofmoran"
-    docker login
-    docker build -t houseofmoran/shartan:2.4.2 .
-    docker push houseofmoran/shartan:2.4.2
+Deploy app (this will use the settings in `fly.toml`):
 
-### Push to k8s cluster
+    flyctl deploy
 
-    # assume kubectl using the content for your cluster
-    kubectl apply -f k8s/namespace.yaml # optional if namespace already created
-    kubectl apply k8s/deployment.yaml
-    kubectl apply k8s/service.yaml
-    kubectl apply k8s/ingress.yaml
+Open app:
+
+    flyctl open
+
+## Domains / SSL
+
+Get IPs:
+
+    flyctl ips list
+
+Add the `v4` IP as an `A` record and the `v6` IP as the `AAAA` record
+
+Once that has propagated, create the cert for the domain:
+
+    flyctl certs create shartan.houseofmoran.com
+
+Show status:
+
+    flyctl certs show shartan.houseofmoran.com
 
 ## Locally
 
